@@ -28,8 +28,8 @@
         "fallback": "en-US"
     },
     "databaseConfig": {
-        "host": "localhost",
-        "database": "krakenNextPassport"
+        "host": "mongodb://sportcity:sportcity@ds045628.mongolab.com:45628/sportcity",
+        "database": "sportcity"
     },
 
     "bcrypt": {
