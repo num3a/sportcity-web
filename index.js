@@ -1,12 +1,13 @@
 'use strict';
 
 
-var kraken = require('kraken-js'),
-    app = require('express')(),
-    api = require('express')(),
+var express = require('express'),
+    kraken = require('kraken-js'),
+    app = express(),
     options = require('./lib/spec')(app),
     userLib = require('./lib/user')(),
-    port = process.env.PORT || 8000;
+    port = process.env.PORT || 8000,
+    api = express.Router();
 
 
 app.use('/api',api);
