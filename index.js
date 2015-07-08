@@ -9,6 +9,9 @@ var express = require('express'),
     port = process.env.PORT || 8000,
     api = express.Router();
 
+api.get('/',function(req,res){
+   res.json({hello: 'world'});
+});
 
 app.use('/api',api);
 app.use(kraken(options));
