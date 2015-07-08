@@ -36,4 +36,8 @@ module.exports = function (router) {
         res.redirect('/login');
     });
 
+    router.get('/api',function(req,res){
+        res.send({hello: 'world'});
+    });
+
 };
