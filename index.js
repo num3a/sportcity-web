@@ -7,11 +7,7 @@ var express = require('express'),
     options = require('./lib/spec')(app),
     userLib = require('./lib/user')(),
     port = process.env.PORT || 8000,
-    api = express.Router();
-
-api.get('/',function(req,res){
-   res.json({hello: 'world'});
-});
+    api = require('./api');
 
 app.use('/api',api);
 app.use(kraken(options));
