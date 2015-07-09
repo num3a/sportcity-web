@@ -2,16 +2,16 @@
 var mongoose = require('mongoose'),
     moment = require('moment');
 
-var bookingModel = function () {
+var paymentMethodModel = function () {
 
-    var bookingSchema = mongoose.Schema({
+    var paymentMethodSchema = mongoose.Schema({
         name: String,
         date: { type: Date, default: Date.now },
         coachId: String,
         maxParticipant : Number
     });
 
-    return mongoose.model('Booking', bookingSchema);
+    return mongoose.model('PaymentMethod', paymentMethodSchema);
 };
 
-module.exports = new bookingModel();
+module.exports = new paymentMethodModel();
