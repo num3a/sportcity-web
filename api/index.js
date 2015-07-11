@@ -3,7 +3,8 @@
 var express = require('express'),
     cors = require('cors'),
     router = express.Router(),
-    Logger = require('le_node');
+    Logger = require('le_node'),
+    bodyParser = require('body-parser');
 
 
 var booking = require('./booking');
@@ -25,10 +26,11 @@ router.get('/', function(req,res){
 
 });
 
-router.post('/book',function(req,res){
-    console.log('post ok');
-    res.send({status: 'OK'});
-});
+// parse application/x-www-form-urlencoded
+router.use(bodyParser.urlencoded({ extended: false }));
+
+// parse application/json
+router.use(bodyParser.json());
 
 router.use('/booking', booking);
 

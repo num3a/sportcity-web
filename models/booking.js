@@ -8,7 +8,7 @@ var bookingModel = function () {
         name: String,
         date: { type: Date, default: Date.now },
         coachId: String,
-        maxParticipant : Number
+        maxParticipant : Number,
     });
 
     return mongoose.model('Booking', bookingSchema);

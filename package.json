@@ -21,6 +21,7 @@
   "dependencies": {
     "adaro": "~0.1.5",
     "bcrypt": "^0.8.0",
+    "body-parser": "^1.13.2",
     "connect-flash": "^0.1.1",
     "cors": "^2.7.1",
     "dustjs-helpers": "~1.2.0",
