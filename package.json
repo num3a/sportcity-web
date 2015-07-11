@@ -29,6 +29,7 @@
     "express": "^4.3.0",
     "kraken-devtools": "^1.0.0",
     "kraken-js": "^1.0.1",
+    "le_node": "^1.0.8",
     "less": "~1.7.0",
     "localizr": "~0.1.0",
     "moment": "^2.10.3",
