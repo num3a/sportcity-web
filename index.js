@@ -7,13 +7,7 @@ var express = require('express'),
     options = require('./lib/spec')(app),
     userLib = require('./lib/user')(),
     port = process.env.PORT || 8000,
-    api = require('./api'),
-    lusca = require('lusca');
-
-app.use(lusca({
-    csrf: false,
-    xssProtection : false
-}));
+    api = require('./api');
 
 app.use('/api',api);
 app.use(kraken(options));

@@ -25,6 +25,11 @@ router.get('/', function(req,res){
 
 });
 
-router.use('./booking', booking);
+router.post('/book',function(req,res){
+    console.log('post ok');
+    res.send({status: 'OK'});
+});
+
+router.use('/booking', booking);
 
 module.exports = router;
