@@ -5,6 +5,9 @@ var express = require('express'),
     router = express.Router(),
     Logger = require('le_node');
 
+
+var booking = require('./booking');
+
 var logger = new Logger({
     token: '0bded162-f6b7-47fc-aad4-372f9cb522b3'
 });
@@ -22,5 +25,6 @@ router.get('/', function(req,res){
 
 });
 
+router.use('./booking', booking);
 
 module.exports = router;

@@ -1,3 +1,5 @@
+'use strict';
+
 var BookingModel = require('../../models/booking');
 
 module.exports = function(router){
