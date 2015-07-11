@@ -59,7 +59,7 @@
                 "method": "csrf",
                 "arguments": [ {} ]
             }
-        }
+        },
         "static": {
             "module": {
                 "arguments": [ "path:./.build" ]
