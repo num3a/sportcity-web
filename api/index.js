@@ -7,7 +7,7 @@ var express = require('express'),
 
 var logger = new Logger({
     token: '0bded162-f6b7-47fc-aad4-372f9cb522b3'
-}),
+});
 
     router.get('/healthcheck',cors(), function(req,res){
 
