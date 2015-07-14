@@ -21,8 +21,6 @@ var logger = new Logger({
 
     });
 
-router.get('/', (req,res) => res.send({status: 'OK'}));
-
 // parse application/x-www-form-urlencoded
 router.use(bodyParser.urlencoded({ extended: false }));
 

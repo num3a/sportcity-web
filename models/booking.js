@@ -8,8 +8,12 @@ var bookingModel = function () {
         name: String,
         date: { type: Date, default: Date.now },
         coachId: String,
-        maxParticipant : Number,
+        maxParticipant : {type : Number, required : true},
+        location: { type: [Number], required: true }
+
     });
+
+    bookingSchema.index({location: '2dsphere'});
 
     return mongoose.model('Booking', bookingSchema);
 };

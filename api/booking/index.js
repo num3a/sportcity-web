@@ -30,6 +30,7 @@ router.post('/',cors(), function(req,res){
     booking.date = req.body.date;
     booking.maxParticipant = req.body.maxParticipant;
     booking.name = req.body.name;
+    booking.location = [10,10];
 
     booking.save(function(err){
         if(!err){
@@ -68,6 +69,7 @@ router.put('/:id',cors(), function(req,res){
         booking.date = req.body.date;
         booking.maxParticipant = req.body.maxParticipant;
         booking.name = req.body.name;
+        booking.location = [10,10];
 
         return booking.save(function(err){
             if(!err){
