@@ -56,6 +56,12 @@ router.get('/:id', cors(),function(req,res){
     });
 });
 
+router.get('/around', cors(),function(req,res){
+    var location = req.params('location');
+    
+    
+});
+
 router.put('/:id',cors(), function(req,res){
     return BookingModel.findById(req.params.id, function(err,booking){
         if (!req.body) return res.sendStatus(400);

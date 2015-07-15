@@ -5,9 +5,12 @@ var mongoose = require('mongoose'),
 var bookingModel = function () {
 
     var bookingSchema = mongoose.Schema({
-        name: String,
+        name: {type : String, required: true},
         date: { type: Date, default: Date.now },
-        coachId: String,
+        coachId: {type : String, required: true},
+        coachName : {type : String, required: true},
+        durationInMinutes : { type: Number , required: true},
+        price : { type: Number , required: true},
         maxParticipant : {type : Number, required : true},
         location: { type: [Number], required: true }
 
