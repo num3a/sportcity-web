@@ -28,7 +28,9 @@
         "fallback": "en-US"
     },
     "databaseConfig": {
-        "host": "mongodb://sportcity:sportcity@ds045628.mongolab.com:45628/sportcity",
+        //TODO: remove localhost, the purpose is to work in disconnected mode
+        //"host": "mongodb://sportcity:sportcity@ds045628.mongolab.com:45628/sportcity",
+        "host" : "mongodb://localhost",
         "database": "sportcity"
     },
 
