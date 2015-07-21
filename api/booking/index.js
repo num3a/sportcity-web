@@ -5,6 +5,7 @@ var express = require('express'),
     router = express.Router(),
     Logger = require('le_node'),
     BookingModel = require('../../models/booking'),
+    CoachProfileModel = require('../../models/coachProfile'),
     requestValidator = require('../../common/tools/validation/requestValidator');
 
 var logger = new Logger({
@@ -95,7 +96,6 @@ router.put('/:id',cors(), function(req,res){
             logger.info('An error occured when updating booking', booking);
             res.send(err);
         }
-
 
         booking.name = req.body.name;
         booking.date = req.body.date;
