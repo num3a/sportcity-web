@@ -70,16 +70,18 @@ router.post('/',cors(), function(req,res){
     booking.durationInMinutes = req.body.durationInMinutes;
     booking.price = req.body.price;
     booking.maxParticipant = req.body.maxParticipant;
-    booking.name = req.body.name;
+
     //TODO: add real location
     booking.location = [10,10];
 
     booking.save(function(err){
         if(!err){
-            return logger.info('booking added');
+            logger.info('booking added');
+            return res.send(booking);
         }
         else{
-            return logger.error('an error occured when saving booking', err);
+            logger.error('an error occured when saving booking', err);
+            return res.send(err);
         }
     });
 

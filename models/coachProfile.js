@@ -2,7 +2,7 @@
 var mongoose = require('mongoose'),
     moment = require('moment');
 
-var coachProfileModel = function () {
+var coachProfileModel = function(){
 
     var coachProfileModel = mongoose.Schema({
         activities : {type : [String], required : true},
