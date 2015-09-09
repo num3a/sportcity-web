@@ -1,4 +1,4 @@
-# with.passport
+# with.passport [OLD PROJECT BASED ON KRAKENJS]
 
 A simple application that manages users with [passport](http://passportjs.org/) and [KrakenJS](http://www.krakenjs.com)
 
